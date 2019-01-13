@@ -4,15 +4,18 @@ import (
 	"math/rand"
 )
 
-// Address generator for common address information.
-type address struct{}
+// AddressGenerator is a container for address generator functions.
+type AddressGenerator struct{}
 
-func Address() *address {
-	return &address{}
+var a = AddressGenerator{}
+
+// Address generator for common address information.
+func Address() *AddressGenerator {
+	return &a
 }
 
-func (a *address) BuildingNumber() string {
-	randomizeSeed()
+// BuildingNumber generates a random building number.
+func (a *AddressGenerator) BuildingNumber() string {
 	options := []string{"#####", "####", "###", "##", "#"}
 	selected := options[rand.Intn(len(options))]
 	return Format(selected)

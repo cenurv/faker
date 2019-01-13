@@ -1,9 +1,10 @@
 package faker
 
 import (
+	"fmt"
 	"testing"
 )
 
 func TestFormat(t *testing.T) {
-	Format("I would like a number #### and a random sequence ????")
+	fmt.Printf("Format :: Number: %v; Sequence: %v\n", Format("####"), Format("????"))
 }

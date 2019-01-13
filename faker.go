@@ -8,6 +8,10 @@ import (
 	"time"
 )
 
+func init() {
+	randomizeSeed()
+}
+
 // Format a string replacing # wih a 0-9 number and a ? with a uppercase or lowercase letter.
 func Format(str string) string {
 	randomizeSeed()
