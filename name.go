@@ -75,11 +75,11 @@ func (n *NameGenerator) Format(format string) string {
 		val = strings.Replace(val, "{first}", n.First(), -1)
 	}
 
-	if strings.Contains(val, "{middle") {
+	if strings.Contains(val, "{middle}") {
 		val = strings.Replace(val, "{middle}", n.First(), -1)
 	}
 
-	if strings.Contains(val, "{initial") {
+	if strings.Contains(val, "{initial}") {
 		val = strings.Replace(val, "{initial}", n.Initial(), -1)
 	}
 

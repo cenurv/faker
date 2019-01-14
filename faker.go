@@ -40,3 +40,13 @@ func Format(str string) string {
 func randomizeSeed() {
 	rand.Seed(time.Now().UTC().UnixNano())
 }
+
+func digit(start, end int8) int8 {
+	var possible []int8
+
+	for i := start; i <= end; i++ {
+		possible = append(possible, i)
+	}
+
+	return possible[rand.Intn(len(possible))]
+}
